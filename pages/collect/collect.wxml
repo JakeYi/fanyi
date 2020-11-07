@@ -1,9 +1,9 @@
 <!-- pages/history/history.wxml -->
 <scroll-view scroll-y class="container">
-  <view class="history-list">
-    <view class="intro">个人历史</view>
-    <view class="title">翻译历史</view>
-    <view class="item" wx:for="{{history}}" wx:key="index">
+  <view class="collect-list">
+    <view class="intro">个人收藏</view>
+    <view class="title">我的收藏</view>
+    <view class="item" wx:for="{{collect}}" wx:key="index">
       <text class='iconfont icon-close' bindtap="onDelete" 
             data-id='{{item._id}}' data-openid='{{item._openid}}'></text>
       <view class='content' bindtap='onTapItem' data-query="{{item.src}}" 

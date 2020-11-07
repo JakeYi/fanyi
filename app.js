@@ -1,13 +1,15 @@
-
 App({
   onLaunch: function () {
+    wx.cloud.init({
+      env: "fanyi-1gu9wkn2ecdadb4a"
+    })
     // 展示本地存储能力
     this.globalData.curLang = wx.getStorageSync('curLang') || this.globalData.langList[0]
+
   },
   globalData: {
     curLang: {},
-    langList: [
-      {
+    langList: [{
         'chs': '英文',
         "lang": 'en',
         "index": 0

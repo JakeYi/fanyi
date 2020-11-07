@@ -2,28 +2,39 @@
   "pages": [
     "pages/index/index",
     "pages/change/change",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/collect/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1c1b21",
     "navigationBarTitleText": "极简翻易",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "red"
+    "backgroundColor": "#fff"
   },
   "tabBar": {
     "borderStyle": "white",
-    "position": "top",
+    "position": "bottom",
     "color": "#595959",
     "selectedColor": "#1c1b21",
     "list": [
       {
         "pagePath": "pages/index/index",
+        "iconPath": "assets/photo/translate_no.png",
+        "selectedIconPath": "assets/photo/translate_yes.png",
         "text": "翻译"
       },
       {
         "pagePath": "pages/history/history",
+        "iconPath": "assets/photo/history_no.png",
+        "selectedIconPath": "assets/photo/history_yes.png",
         "text": "历史"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "iconPath": "assets/photo/collect_no.png",
+        "selectedIconPath": "assets/photo/collect_yes.png",
+        "text": "收藏"
       }
     ]
   },

@@ -1,11 +1,11 @@
 /* pages/history/history.wxss */
 
-.history-list {
+.collect-list {
   display: flex;
   flex-direction: column;
   padding: 40rpx;
 }
-.history-list .intro{
+.collect-list .intro{
   font-size: 60rpx;
   font-weight: bold;
   color: #000;

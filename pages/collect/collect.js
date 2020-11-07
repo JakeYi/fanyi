@@ -1,16 +1,16 @@
 const app = getApp()
-const dbHis = wx.cloud.database().collection("history")
+const dbCollect = wx.cloud.database().collection("collect")
 
 Page({
   data: {
-    history: []
+    collect: []
   },
 
   onShow: function () {
-    dbHis.get({
+    dbCollect.get({
       success: res => {
         this.setData({
-          history: res.data
+          collect: res.data
         })
       }
     })
@@ -20,10 +20,10 @@ Page({
     // console.log(this.data.history)
     wx.showModal({
       title: '提醒',
-      content: '是否确认删除本条历史记录',
+      content: '是否确认删除本条收藏',
       success (res) {
         if (res.confirm) {
-          dbHis.where({
+          dbCollect.where({
             _openid: e.currentTarget.dataset.openid,
             _id : e.currentTarget.dataset.id
           }).remove({
@@ -31,10 +31,10 @@ Page({
               console.log('删除成功')
             }
           })
-          var arr = that.data.history
+          var arr = that.data.collect
           arr.splice(e.currentTarget.dataset.id,1)
           that.setData({
-            history: arr,
+            collect: arr,
           })
         } else if (res.cancel) {
           console.log('用户点击取消')
